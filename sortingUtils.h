@@ -7,7 +7,7 @@ void printArray(int *list, int n);
 
 int checkIfSorted(int *list, int n);
 
-void testAlgorithm(void (*fun)(int *list, int n), int start, int step, int steps, int runs);
+void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs);
 
 /**
  * @brief Prints whole list into console
@@ -70,7 +70,7 @@ int checkIfSorted(int *list, int n)
  * @param steps 
  * @param runs 
  */
-void testAlgorithm(void (*fun)(int *list, int n), int start, int step, int steps, int runs)
+void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs)
 {
     int *array;
     int sorted, n;
@@ -92,7 +92,7 @@ void testAlgorithm(void (*fun)(int *list, int n), int start, int step, int steps
             getRandomData(array, n);
 
             begin = clock();
-            fun(array, n);
+            alg(array, n);
             end = clock();
 
             sorted = checkIfSorted(array, n);

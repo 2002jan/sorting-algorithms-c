@@ -1,14 +1,23 @@
 #include <stdio.h>
 #include <time.h>
 #include "algorithms/IS.h"
+#include "algorithms/QS.h"
 #include "sortingUtils.h"
 
 int main()
 {
 
-    void (*IS)(int *array, int n) = insertionSort;
+    printf("\nInsert Sort: \n");
 
-    testAlgorithm(IS, 100, 100, 100, 5);
+    void (*ALG)(int *array, int n) = insertionSort;
+
+    testAlgorithm(ALG, 100, 100, 100, 5);
+
+    printf("\nQuick Sort: \n");
+
+    ALG = quickSort;
+    
+    testAlgorithm(ALG, 100, 100, 100, 5);
 
     return 0;
 
