@@ -81,7 +81,7 @@ void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps
         n = start + step * i;
         printf("Run %d:", i + 1);
 
-        double timepassed = 0;
+        double timepassed = 0.0;
 
         int j;
 
@@ -105,7 +105,7 @@ void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps
                 break;
             }
 
-            timepassed += (double)(end - begin) * 1000 / CLOCKS_PER_SEC;
+            timepassed += (double)(end - begin) / CLOCKS_PER_SEC;
 
             free(array);
         }
@@ -114,7 +114,7 @@ void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps
 
         if (sorted == 1)
         {
-            printf(" Passed in %fms\n", timepassed);
+            printf(" Passed in %f ms\n", timepassed * 1000);
         }
     }
 }
