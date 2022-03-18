@@ -6,6 +6,7 @@
 #include "algorithms/HS.h"
 #include "algorithms/SS.h"
 #include "algorithms/BS.h"
+#include "algorithms/MS.h"
 
 int main()
 {
@@ -36,6 +37,12 @@ int main()
     printf("\nHeap Sort: \n");
 
     ALG = heapSort;
+    
+    testAlgorithm(ALG, 1000, 1000, 100, 5, Random);
+    
+    printf("\nMerge Sort: \n");
+
+    ALG = mergeSort;
     
     testAlgorithm(ALG, 1000, 1000, 100, 5, Random);
 
