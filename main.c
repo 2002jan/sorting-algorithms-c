@@ -7,12 +7,16 @@
 #include "algorithms/SS.h"
 #include "algorithms/BS.h"
 #include "algorithms/MS.h"
+#include "algorithms/ShS.h"
 
 int main()
 {
+
+    void (*ALG)(int *array, int n);
+
     printf("\nInsert Sort: \n");
 
-    void (*ALG)(int *array, int n) = insertionSort;
+    ALG = insertionSort;
 
     testAlgorithm(ALG, 10, 10, 100, 5, Random);
 
@@ -43,6 +47,12 @@ int main()
     printf("\nMerge Sort: \n");
 
     ALG = mergeSort;
+    
+    testAlgorithm(ALG, 1000, 1000, 100, 5, Random);
+    
+    printf("\nShell Sort: \n");
+
+    ALG = shellSort;
     
     testAlgorithm(ALG, 1000, 1000, 100, 5, Random);
 
