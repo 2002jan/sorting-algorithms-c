@@ -1,3 +1,6 @@
+#ifndef SORTING_UTILS
+#define SORTING_UTILS
+
 #include <stdio.h>
 #include <time.h>
 #include "random_data.h"
@@ -118,3 +121,5 @@ void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps
         }
     }
 }
+
+#endif

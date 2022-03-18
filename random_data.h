@@ -1,3 +1,6 @@
+#ifndef RANDOM_DATA
+#define RANDOM_DATA
+
 #include <stdlib.h>
 
 void getRandomData(int *array, int n);
@@ -11,3 +14,5 @@ void getRandomData(int *array, int n)
         array[i] = rand() % 10000;
     }
 }
+
+#endif

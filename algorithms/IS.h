@@ -1,3 +1,6 @@
+#ifndef INSERTION_SORT
+#define INSERTION_SORT
+
 #include "algorithmsUtils.h"
 
 void insertionSort(int *list, int n);
@@ -18,3 +21,5 @@ void insertionSort(int *list, int n)
         
     }
 }
+
+#endif

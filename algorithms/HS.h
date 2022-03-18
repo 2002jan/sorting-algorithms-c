@@ -1,3 +1,6 @@
+#ifndef HEAP_SORT
+#define HEAP_SORT
+
 #include "algorithmsUtils.h"
 
 void heapSort(int *list, int n);
@@ -43,3 +46,5 @@ void heapify(int *list, int n, int i)
         heapify(list, n, biggest);
     }
 }
+
+#endif

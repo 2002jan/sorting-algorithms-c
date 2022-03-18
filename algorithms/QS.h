@@ -1,3 +1,6 @@
+#ifndef QUICK_SORT
+#define QUICK_SORT
+
 #include "algorithmsUtils.h"
 
 void quickSort(int *list, int n);
@@ -39,3 +42,5 @@ void quickSort(int *list, int n)
     
     
 }
+
+#endif
