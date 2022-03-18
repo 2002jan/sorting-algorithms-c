@@ -7,24 +7,23 @@
 
 int main()
 {
-
     printf("\nInsert Sort: \n");
 
     void (*ALG)(int *array, int n) = insertionSort;
 
-    testAlgorithm(ALG, 100, 100, 100, 5);
+    testAlgorithm(ALG, 100, 100, 100, 5, Random);
 
     printf("\nQuick Sort: \n");
 
     ALG = quickSort;
     
-    testAlgorithm(ALG, 2000, 2000, 100, 5);
+    testAlgorithm(ALG, 2000, 2000, 100, 5, Random);
 
     printf("\nHeap Sort: \n");
 
     ALG = heapSort;
     
-    testAlgorithm(ALG, 2000, 2000, 100, 5);
+    testAlgorithm(ALG, 2000, 2000, 100, 5, Random);
 
     return 0;
 

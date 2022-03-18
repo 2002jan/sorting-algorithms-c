@@ -10,7 +10,7 @@ void printArray(int *list, int n);
 
 int checkIfSorted(int *list, int n);
 
-void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs);
+void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs, enum sequenceType sequenceType);
 
 /**
  * @brief Prints whole list into console
@@ -72,8 +72,9 @@ int checkIfSorted(int *list, int n)
  * @param step 
  * @param steps 
  * @param runs 
+ * @param sequenceType
  */
-void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs)
+void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs, enum sequenceType sequenceType)
 {
     int *array;
     int sorted, n;
@@ -92,7 +93,7 @@ void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps
         {
             array = (int *)malloc(n * sizeof(int));
 
-            getRandomData(array, n);
+            getSequence(array, n, sequenceType);
 
             begin = clock();
             alg(array, n);
