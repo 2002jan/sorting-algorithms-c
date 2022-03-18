@@ -3,6 +3,7 @@
 #include "algorithms/IS.h"
 #include "algorithms/QS.h"
 #include "sortingUtils.h"
+#include "algorithms/HS.h"
 
 int main()
 {
@@ -16,6 +17,12 @@ int main()
     printf("\nQuick Sort: \n");
 
     ALG = quickSort;
+    
+    testAlgorithm(ALG, 100, 100, 100, 5);
+
+    printf("\nHeap Sort: \n");
+
+    ALG = heapSort;
     
     testAlgorithm(ALG, 100, 100, 100, 5);
 
