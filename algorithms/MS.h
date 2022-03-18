@@ -36,28 +36,21 @@ void merge(int *list, int n)
     for (; i < n; i++)
         listR[i - middle] = list[i];
 
-
-    i = 0;
-    j = 0;
-    p = 0;
+    i = 0, j = 0, p = 0;
 
     while (i < l && j < r)
     {
         if (listL[i] <= listR[j])
-        {
-            list[p] = listL[i++];
-        }
+            list[p++] = listL[i++];
         else
-        {
-            list[p] = listR[j++];
-        }
-        p++;
+            list[p++] = listR[j++];
     }
 
-    while (i < l) list[p++] = listL[i++];
+    while (i < l)
+        list[p++] = listL[i++];
 
-    while (j < r) list[p++] = listR[j++];
-
+    while (j < r)
+        list[p++] = listR[j++];
 }
 
 #endif
