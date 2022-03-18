@@ -8,6 +8,7 @@
 #include "algorithms/BS.h"
 #include "algorithms/MS.h"
 #include "algorithms/ShS.h"
+#include "algorithms/CS.h"
 
 int main()
 {
@@ -53,6 +54,12 @@ int main()
     printf("\nShell Sort: \n");
 
     ALG = shellSort;
+    
+    testAlgorithm(ALG, 1000, 1000, 100, 5, Random);
+    
+    printf("\nCounting Sort: \n");
+
+    ALG = countingSort;
     
     testAlgorithm(ALG, 1000, 1000, 100, 5, Random);
 

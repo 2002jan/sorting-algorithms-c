@@ -56,6 +56,7 @@ int checkIfSorted(int *list, int n)
         if (list[i - 1] > list[i])
         {
             sorted = 0;
+            printf("\n\n%d, %d\n\n", list[i - 1], list[i]);
             break;
         }
         
