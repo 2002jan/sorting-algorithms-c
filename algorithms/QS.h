@@ -10,7 +10,7 @@ void quickSort(int *list, int n)
    
     int pivot = list[n / 2];
 
-    int i = -1, j = n, temp;
+    int i = -1, j = n;
 
     while (1)
     {

@@ -11,7 +11,7 @@ void insertionSort(int *list, int n)
 
     for(i = 1; i < n; i++)
     {
-        int j = i - 1, temp;
+        int j = i - 1;
 
         while (list[j] > list[j + 1] && j >= 0)
         {
