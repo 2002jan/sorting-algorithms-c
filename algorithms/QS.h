@@ -1,3 +1,5 @@
+#include "algorithmsUtils.h"
+
 void quickSort(int *list, int n);
 
 void quickSort(int *list, int n)
@@ -21,9 +23,7 @@ void quickSort(int *list, int n)
 
         if (list[i] >= pivot && list[j] <= pivot)
         {
-            temp = list[i];
-            list[i] = list[j];
-            list[j] = temp;
+            swap(list + j, list + i);
         }
     }
 

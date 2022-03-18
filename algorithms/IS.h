@@ -1,3 +1,5 @@
+#include "algorithmsUtils.h"
+
 void insertionSort(int *list, int n);
 
 void insertionSort(int *list, int n)
@@ -10,10 +12,7 @@ void insertionSort(int *list, int n)
 
         while (list[j] > list[j + 1] && j >= 0)
         {
-            temp = list[j];
-            list[j] = list[j + 1];
-            list[j + 1] = temp;
-
+            swap(list + j, list + j + 1);
             j -= 1;
         }
         
