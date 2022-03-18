@@ -18,13 +18,13 @@ int main()
 
     ALG = quickSort;
     
-    testAlgorithm(ALG, 100, 100, 100, 5);
+    testAlgorithm(ALG, 2000, 2000, 100, 5);
 
     printf("\nHeap Sort: \n");
 
     ALG = heapSort;
     
-    testAlgorithm(ALG, 100, 100, 100, 5);
+    testAlgorithm(ALG, 2000, 2000, 100, 5);
 
     return 0;
 
