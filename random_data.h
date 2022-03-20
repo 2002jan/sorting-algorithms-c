@@ -14,6 +14,8 @@ enum sequenceType
     VShaped
 };
 
+char *getSequenceTypeName(enum sequenceType type);
+
 void getSequence(int *array, int n, enum sequenceType type);
 
 void getSequence(int *array, int n, enum sequenceType type)
@@ -62,6 +64,36 @@ void getSequence(int *array, int n, enum sequenceType type)
             }
         }
     }
+}
+
+char *getSequenceTypeName(enum sequenceType type)
+{
+
+    switch (type)
+    {
+    case Random:
+        return "Random";
+        break;
+    case Constant:
+        return "Constant";
+        break;
+    case Increasing:
+        return "Increasing";
+        break;
+    case Descending:
+        return "Descending";
+        break;
+    case AShaped:
+        return "AShaped";
+        break;
+    case VShaped:
+        return "VShaped";
+        break;
+    default:
+        return "";
+        break;
+    }
+
 }
 
 #endif
