@@ -45,6 +45,8 @@ void countingSort(int *list, int n)
             list[temp[i] - j] = i;
         }
     }
+
+    free(temp);
 }
 
 
