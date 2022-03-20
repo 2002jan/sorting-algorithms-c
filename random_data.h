@@ -2,7 +2,7 @@
 #define RANDOM_DATA
 
 #include <stdlib.h>
-#define RANDOM_MODULO 10000;
+#define RANDOM_MODULO 32767;
 
 enum sequenceType
 {
