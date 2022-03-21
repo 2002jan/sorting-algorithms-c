@@ -2,7 +2,7 @@
 #define RANDOM_DATA
 
 #include <stdlib.h>
-#define RANDOM_MODULO 32767;
+#define RANDOM_MODULO 1000000;
 
 enum sequenceType
 {
@@ -27,7 +27,7 @@ void getSequence(int *array, int n, enum sequenceType type)
 
         if (type == Random)
         {
-            array[i] = rand() % RANDOM_MODULO;
+            array[i] =( rand() * rand() ) % RANDOM_MODULO;
         }
         else if (type == Constant)
         {

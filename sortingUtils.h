@@ -4,13 +4,14 @@
 #include <stdio.h>
 #include <time.h>
 #include "random_data.h"
+#include "csvExporter.h"
 
 
 void printArray(int *list, int n);
 
 int checkIfSorted(int *list, int n);
 
-void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs, enum sequenceType sequenceType);
+void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs, enum sequenceType sequenceType, int saveToCsv, char *exerciseName, char *algorithmName);
 
 /**
  * @brief Prints whole list into console
@@ -75,15 +76,21 @@ int checkIfSorted(int *list, int n)
  * @param runs 
  * @param sequenceType
  */
-void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs, enum sequenceType sequenceType)
+void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps, int runs, enum sequenceType sequenceType, int saveToCsv, char *exerciseName, char *algorithmName)
 {
     int *array;
     int sorted, n;
     clock_t begin, end;
 
-    for (int i = 0; i < steps; i++)
+    double timesList[steps];
+    int stepsList[steps];
+
+    int i;
+
+    for (i = 0; i < steps; i++)
     {
         n = start + step * i;
+        stepsList[i] = n;
         printf("Run %d:", i + 1);
 
         double timepassed = 0.0;
@@ -117,10 +124,16 @@ void testAlgorithm(void (*alg)(int *list, int n), int start, int step, int steps
         
         timepassed /= runs;
 
+        timesList[i] = timepassed * 1000;
+
         if (sorted == 1)
         {
             printf(" Passed in %f ms\n", timepassed * 1000);
         }
+    }
+
+    if(saveToCsv == 1){
+        exportToCsv(stepsList, timesList, steps, exerciseName, algorithmName, sequenceType);
     }
 }
 

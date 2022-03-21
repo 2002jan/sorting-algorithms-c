@@ -2,21 +2,22 @@
 #define QUICK_SORT
 
 #include "algorithmsUtils.h"
+#include <stdio.h>
 
 void quickSort(int *list, int n);
 
 void quickSort(int *list, int n)
 {
-   
+
     int pivot = list[n / 2];
 
     int i = -1, j = n;
 
     while (1)
     {
-        while (list[++i] < pivot);
+        while (list[++i] < pivot && i <= j);
 
-        while (list[--j] > pivot);
+        while (list[--j] > pivot && i <= j);
 
         if (i > j)
         {

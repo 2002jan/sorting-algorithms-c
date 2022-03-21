@@ -26,10 +26,10 @@ void exportToCsv(int *ns, double *time, int n, char *exerciseName, char *algorit
 {
     checkSubdirectory(output_path);
 
-    char *path;
+    char *path = (char *)malloc(sizeof(char) * _MAX_PATH);
 
     sprintf(path, "%s\\output_%s_%s_%s.csv", output_path, exerciseName, algorithmName, getSequenceTypeName(dataType));
-
+    
     FILE *csv;
     
     csv = fopen(path, "w+");
