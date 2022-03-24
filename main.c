@@ -14,6 +14,12 @@ int main()
 {
 
     void (*ALG)(int *array, int n);
+    
+    printf("\nQuick Sort: \n");
+
+    ALG = quickSort;
+
+    testAlgorithm(ALG, 10000, 10000, 100, 1, Random, 1, "2", "QS");
 
     // printf("\n<----Exercise 1---->\n");
 
@@ -41,7 +47,7 @@ int main()
 
     // testAlgorithm(ALG, 10000, 33000, 30, 5, Random, 1, "1", "ShS");
 
-    printf("\n<----Exercise 2---->\n");
+    // printf("\n<----Exercise 2---->\n");
 
     // printf("\nQuick Sort: \n");
 
@@ -65,27 +71,27 @@ int main()
     // printf("\nVShaped data: \n");
     // testAlgorithm(ALG, 20000, 6000, 30, 5, VShaped, 1, "2", "QS");
 
-    printf("\nHeap Sort: \n");
+    // printf("\nHeap Sort: \n");
 
-    ALG = heapSort;
+    // ALG = heapSort;
 
-    printf("\nRandom data: \n");
-    testAlgorithm(ALG, 20000, 6000, 30, 5, Random, 1, "2", "HS");
+    // printf("\nRandom data: \n");
+    // testAlgorithm(ALG, 20000, 6000, 30, 5, Random, 1, "2", "HS");
 
-    printf("\nConstant data: \n");
-    testAlgorithm(ALG, 20000, 6000, 30, 5, Constant, 1, "2", "HS");
+    // printf("\nConstant data: \n");
+    // testAlgorithm(ALG, 20000, 6000, 30, 5, Constant, 1, "2", "HS");
     
-    printf("\nIncreasing data: \n");
-    testAlgorithm(ALG, 20000, 6000, 30, 5, Increasing, 1, "2", "HS");
+    // printf("\nIncreasing data: \n");
+    // testAlgorithm(ALG, 20000, 6000, 30, 5, Increasing, 1, "2", "HS");
     
-    printf("\nDescending data: \n");
-    testAlgorithm(ALG, 20000, 6000, 30, 5, Descending, 1, "2", "HS");
+    // printf("\nDescending data: \n");
+    // testAlgorithm(ALG, 20000, 6000, 30, 5, Descending, 1, "2", "HS");
     
-    printf("\nAShaped data: \n");
-    testAlgorithm(ALG, 20000, 6000, 30, 5, AShaped, 1, "2", "HS");
+    // printf("\nAShaped data: \n");
+    // testAlgorithm(ALG, 20000, 6000, 30, 5, AShaped, 1, "2", "HS");
     
-    printf("\nVShaped data: \n");
-    testAlgorithm(ALG, 20000, 6000, 30, 5, VShaped, 1, "2", "HS");
+    // printf("\nVShaped data: \n");
+    // testAlgorithm(ALG, 20000, 6000, 30, 5, VShaped, 1, "2", "HS");
 
     // printf("\nMerge Sort: \n");
 

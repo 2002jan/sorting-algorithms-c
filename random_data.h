@@ -18,6 +18,8 @@ char *getSequenceTypeName(enum sequenceType type);
 
 void getSequence(int *array, int n, enum sequenceType type);
 
+int uniform_distribution(int max);
+
 void getSequence(int *array, int n, enum sequenceType type)
 {
     int i, middlePoint = n / 2;
@@ -27,7 +29,7 @@ void getSequence(int *array, int n, enum sequenceType type)
 
         if (type == Random)
         {
-            array[i] =( rand() * rand() ) % RANDOM_MODULO;
+            array[i] = uniform_distribution(1000000);
         }
         else if (type == Constant)
         {
@@ -94,6 +96,12 @@ char *getSequenceTypeName(enum sequenceType type)
         break;
     }
 
+}
+
+int uniform_distribution(int max)
+{
+    double randNum = rand()/(1.0 + RAND_MAX);
+    return (randNum * (max + 1));
 }
 
 #endif
