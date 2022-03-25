@@ -23,12 +23,8 @@ void quickSort(int *list, int n)
         {
             break;
         }
-        
 
-        if (list[i] >= pivot && list[j] <= pivot)
-        {
-            swap(list + j, list + i);
-        }
+        swap(list + j, list + i);
     }
 
     if (j > 0)
@@ -40,8 +36,6 @@ void quickSort(int *list, int n)
     {
         quickSort(list + i, n - i);
     }
-    
-    
 }
 
 #endif
