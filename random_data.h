@@ -2,7 +2,6 @@
 #define RANDOM_DATA
 
 #include <stdlib.h>
-#define RANDOM_MODULO 1000000;
 
 enum sequenceType
 {
@@ -29,7 +28,7 @@ void getSequence(int *array, int n, enum sequenceType type)
 
         if (type == Random)
         {
-            array[i] = uniform_distribution(1000000);
+            array[i] = uniform_distribution(i);
         }
         else if (type == Constant)
         {
@@ -49,6 +48,10 @@ void getSequence(int *array, int n, enum sequenceType type)
             {
                 array[i] = i * 2 + 1;
             }
+            else if (i == middlePoint)
+            {
+                array[i] = n;
+            }
             else
             {
                 array[i] = (n - i) * 2;
@@ -58,7 +61,16 @@ void getSequence(int *array, int n, enum sequenceType type)
         {
             if (i < middlePoint)
             {
-                array[i] = (middlePoint - i) * 2 + 1;
+                array[i] = (n - middlePoint - i) * 2 - 1;
+            }
+            else if (i == middlePoint)
+            {
+                if (n % 2 == 1)
+                    array[i] = 1;
+                else {
+                    array[i] = 2;
+                    middlePoint -= 1;
+                    }
             }
             else
             {
@@ -95,12 +107,11 @@ char *getSequenceTypeName(enum sequenceType type)
         return "";
         break;
     }
-
 }
 
 int uniform_distribution(int max)
 {
-    double randNum = rand()/(1.0 + RAND_MAX);
+    double randNum = rand() / (1.0 + RAND_MAX);
     return (randNum * (max + 1));
 }
 
