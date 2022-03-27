@@ -22,7 +22,7 @@ void checkSubdirectory(char *path)
 
     if (stat(path, &sb) == -1)
     {
-        mkdir(path, 0700);
+        mkdir(path);
     }
 }
 

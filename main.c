@@ -21,25 +21,25 @@ int main()
 
     ALG = bubbleSort;
 
-    testAlgorithm(ALG, 400, 100, 30, 1, Random, 1, "1", "BS");
+    testAlgorithm(ALG, 20000, 6000, 30, 1, Random, 1, "1", "BS");
 
     printf("\nHeap Sort: \n");
 
     ALG = heapSort;
 
-    testAlgorithm(ALG, 10000, 33000, 30, 5, Random, 1, "1", "HS");
+    testAlgorithm(ALG, 20000, 6000, 30, 5, Random, 1, "1", "HS");
 
     printf("\nCounting Sort: \n");
 
     ALG = countingSort;
 
-    testAlgorithm(ALG, 10000, 33000, 30, 5, Random, 1, "1", "CS");
+    testAlgorithm(ALG, 20000, 6000, 30, 5, Random, 1, "1", "CS");
 
     printf("\nShell Sort: \n");
 
     ALG = shellSort;
 
-    testAlgorithm(ALG, 10000, 33000, 30, 5, Random, 1, "1", "ShS");
+    testAlgorithm(ALG, 20000, 6000, 30, 5, Random, 1, "1", "ShS");
 
     printf("\n<----Exercise 2---->\n");
 
