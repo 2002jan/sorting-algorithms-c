@@ -63,7 +63,7 @@ int main()
     testAlgorithm(ALG, 20000, 6000, 30, 5, AShaped, 1, "2", "QS");
     
     printf("\nVShaped data: \n");
-    testAlgorithm(ALG, 4000, 1000, 30, 1, VShaped, 1, "2", "QS");
+    testAlgorithm(ALG, 20000, 6000, 30, 1, VShaped, 1, "2", "QS");
 
     printf("\nHeap Sort: \n");
 

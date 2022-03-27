@@ -1,3 +1,7 @@
+#ifndef PATH_MAX
+#define PATH_MAX 260
+#endif
+
 #ifndef CSV_EXPORTER
 #define CSV_EXPORTER
 
@@ -18,7 +22,7 @@ void checkSubdirectory(char *path)
 
     if (stat(path, &sb) == -1)
     {
-        mkdir(path);
+        mkdir(path, 0700);
     }
 }
 
@@ -26,7 +30,7 @@ void exportToCsv(int *ns, double *time, int n, char *exerciseName, char *algorit
 {
     checkSubdirectory(output_path);
 
-    char *path = (char *)malloc(sizeof(char) * _MAX_PATH);
+    char *path = (char *)malloc(sizeof(char) * PATH_MAX);
 
     sprintf(path, "%s\\output_%s_%s_%s.csv", output_path, exerciseName, algorithmName, getSequenceTypeName(dataType));
     
